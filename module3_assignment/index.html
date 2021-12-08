@@ -1,155 +1,101 @@
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
+    <!-- Here I'm using the default template from Bootstrap 5 and it is different in some aspects than the older Bootstrap from lessons. Made some research to figure out those new classes and how to use them -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>David Chu's China Bistro</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-</head>
-<body>
-<header>
-    <nav id="header-nav" class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <div class="navbar-brand">
-                    <a href="index.html"><h1>Food, LLC</h1></a>
-                </div>
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
 
-            <div id="collapsable-nav" class="collapse navbar-collapse">
-                <ul id="nav-list" class="nav navbar-nav navbar-right visible-xs">
-                    <li>
-                        <p class="text-center"> Chicken </p>
-                    </li>
-                    <li>
-                        <p class="text-center"> Beef </p>
-                    </li>
-                    <li>
-                        <p class="text-center"> Sushi </p>
-                    </li>
-                </ul><!-- #nav-list -->
-            </div><!-- .collapse .navbar-collapse -->
-        </div><!-- .container -->
-    </nav><!-- #header-nav -->
-</header>
+    <!-- Using direct links to the Bootstrap CSS file hosted on their server -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Below I'm linking the only CSS file that is needed to override or add stuff for this project. It contains only one small override cuz I've almost made this assignment using ONLY Bootstrap default classes :3 -->
+    <link rel="stylesheet" href="css/styles.css">
 
+    <title>Module 3 solution using Bootstrap 5 (latest)</title>
+  </head>
+  <body>
+    <!-- Pay attention to how I use default Bootstrap classes to fix colors, paddings and margins (bg-light, py, mx, border, text-white etc.) so in my styles I don't override those and use mostly what Bootstrap provides out of the box -->
 
-<div id="main-content" class="container">
-    <div id="home-tiles" class="row">
-        <div class="col-xs-12">
-            <h2 class="text-center"> Our Menu</h2>
+    <!-- NAVBAR START -->
+    <nav class="navbar navbar-expand-xs navbar-light bg-warning py-0">
+      <div class="container-fluid p-0">
+        <a class="navbar-brand my-2 ms-3" href="#">Food, LLC</a>
+        <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse bg-light" id="navbarSupportedContent">
+          <ul class="navbar-nav visible-xs ">
+            <li class="nav-item text-center border-bottom border-secondary">
+              <a class="nav-link" href="#">Chicken</a>
+            </li>
+            <li class="nav-item text-center border-bottom border-secondary">
+              <a class="nav-link" href="#">Beef</a>
+            </li>
+            <li class="nav-item text-center border-bottom border-secondary">
+              <a class="nav-link" href="#">Sushi</a>
+            </li>
+          </ul>
         </div>
-        <div class="col-xs-12">
-            <div class="item-text">
-                <p class="text-center">
-                    Chicken
-                </p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum porttitor sem et sodales. Integer non nibh quis magna varius consectetur ac eu turpis. Aenean vehicula orci velit, non maximus est aliquam eu. Pellentesque quis maximus nisi. Duis vel tincidunt urna. Sed velit nibh, luctus sed
-                dolor ac, lobortis ornare nulla. Suspendisse non condimentum mauris.
+      </div>
+    </nav>
+    <!-- NAVBAR END -->
 
-                Donec convallis gravida ante vitae fermentum. Etiam id finibus purus. Sed ornare ultrices ex eget varius. Integer hendrerit imperdiet justo, nec molestie orci tincidunt vitae. Praesent eu massa fermentum, commodo arcu id, ornare lorem. Morbi a lacus nec nisl porta mollis vel nec velit. Proin malesuada
-                justo id massa finibus sodales. Curabitur elit tortor, tristique ut augue eu, lobortis rhoncus leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut nec urna eros. In
-                vitae venenatis erat. Aenean a elit vitae tellus mattis consectetur. In hac habitasse platea dictumst. Aenean quis blandit ipsum, vel semper metus.
+    <!-- HEADER START -->
+    <h1 class="text-center my-4">Our menu</h1>
+    <!-- HEADER END -->
 
-                Nunc tristique finibus placerat. Curabitur quis enim vel diam mollis sollicitudin. Morbi tincidunt risus sit amet dui feugiat aliquet. Nulla tortor ex, fringilla ut suscipit at, ultricies vel dolor. Sed euismod congue neque, at aliquet enim accumsan ac. Fusce et dapibus mauris, id suscipit ipsum.
-                Phasellus at orci a purus suscipit lacinia vel vitae ipsum. Maecenas at imperdiet elit. Nunc vulputate dolor sed scelerisque blandit.
+    <!-- CONTENT START -->
+    <section class="container-fluid">
+      <div class="row m-2">
+        <div class="col-xs-12 p-4 rounded bg-success text-white">
+          <p>There’s a lot of reasons that nutrition experts are always telling people to eat more veggies. Here's more about why this food group is so good for you. When it comes to eating vegetables—Mom was right. They're good for you! That probably doesn't come as a surprise. Most of us know that eating vegetables (and fruits) is a healthy habit. But still, most Americans are not eating the recommended 2 to 4 cups (the exact amount varies depending on age and sex). All veggies count towards your daily quota. That includes starchy ones (like potatoes), leafy greens, canned tomatoes and frozen spinach. To help nudge you towards upping your intake, here are 10 reasons why vegetables are so good for your health.</p>
+          
+          <p>Sometimes inflammation is good, but too much chronic inflammation isn't great for our bodies. Veggies are one of the best foods to eat to help you fend off inflammation. They are rich in antioxidants and phytochemicals to help your body.</p>
+          
+          <p>Nearly half of Americans have high blood pressure, according to the CDC. When it comes to your diet and blood pressure, eating too much salt isn't great. But, eating more potassium-rich foods can help reduce the damage of a high-sodium diet. Vegetables, like beets and spinach, deliver potassium (amongst other nutrients) and the fiber from vegetables also helps your heart.</p>
+          
+          <p>Most of us don't hit our recommended fiber intake (that's 38g/day for men and 25g/day for women). Eating high-fiber foods like whole grains, fruits, legumes, nuts and yes, vegetables can help you get enough of this key nutrient. Fiber is great for your heart and gut, but also can keep you full and reduce your risk of developing diabetes. All vegetables have fiber, so choose a variety to get your fill. Artichokes, sweet potatoes and peas all make our list of foods with more fiber than an apple.</p>
+          
+          <p>Eye health may be top of mind if you stare at a computer and phone all day, which can strain your eyes, according to the American Optometric Association. If you want to protect your eyes, eat more vegetables (you'll also want to take some screen breaks and see your eye doctor). Lutein and zeaxanthin are two carotenoids that help reduce the risk of age-related macular degeneration (AMD). You'll find them and other eye-protecting carotenoids in basil, corn, red peppers, spinach and broccoli.</p>
+          
+          <p>You can help take care of your skin by staying hydrated and getting quality sleep, but what you eat can help too. Tomatoes deliver lycopene, which can actually help protect your skin from sunburn (sunscreen is important too). Kale and avocados can help keep your skin more elastic. Many vegetables, like cucumbers and celery, also have a high water content to help you meet your hydration goals for glowing skin.</p>
+          
+          <p>Heart disease is the leading killer of men and women in America and diet plays a big role in helping keep your heart healthy. Vegetables give you potassium and fiber, two nutrients that are good for your heart. Adding lots of veggies to your diet can also help you keep your weight in a healthy range, which takes some pressure off your heart. Leafy greens, avocados and tomatoes make our list of top heart-healthy foods, but all veggies have benefits for your heart.</p>
+          
+          <p>Whether you have diabetes or not, vegetables are low in calories and high in fiber and nutrients, so they can help fill you up and can minimize blood sugar spikes during meals. Adding some arugula to your pasta helps bulk up your plate and keep you satisfied. Try adding peppers to tacos or cauliflower to stir-fries. Some vegetables are higher in starches and carbs—think potatoes, corn, squash, peas—but they can still be included in your diet. (Here are 10 of the best vegetables to eat when you have diabetes.)</p>
+          
+          <p>No diet choice is guaranteed to keep you cancer free, but vegetables are full of cancer-fighting nutrients and antioxidants that may reduce your risk of certain types of cancers. Cruciferous vegetables, like Brussels sprouts and cauliflower, have been studied for their cancer-fighting power. They deliver potassium, folate, vitamin C and phytochemicals, as well as sulforaphane (highest in broccoli) which may protect your cells from carcinogens. Variety is key here, as all veggies have different nutrients and protective effects.</p>
+          
+          <p>If you want to keep your brain sharp, including vegetables in your diet is the way to go. Vegetables, especially leafy greens, are part of the MIND Diet, which was designed by researchers to help reduce your risk of Alzhemier's disease and dementia. The antioxidants and folate they deliver are key nutrients for your brain.</p>
+          
+          <p>It's no secret that what you eat impacts your immune system. Vitamin C is a key nutrient that's found in lots of vegetables (people are always surprised to learn that broccoli and bell peppers have more vitamin C than an orange) that helps keep your immune system strong. Eating a well-balanced diet with a variety of foods is also important for your immune system, so include lots of different veggies as well as fruits, whole grains, healthy fats and protein sources.</p>
 
-                Vivamus nec suscipit velit, vestibulum iaculis metus. Sed sollicitudin lacus neque, et auctor erat vulputate at. Duis fermentum ex sit amet magna dapibus, vitae fringilla lorem tempus. Curabitur quis scelerisque justo, sed tincidunt ex. Vivamus eu justo at nulla pulvinar lobortis. Mauris imperdiet porta
-                pulvinar. Nullam blandit justo in metus gravida, eu porttitor eros viverra. Nulla faucibus odio eget nisl suscipit aliquet. Nulla eget ullamcorper libero, aliquam vulputate sem. Aenean eu mattis lorem, in molestie ipsum.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum porttitor sem et sodales. Integer non nibh quis magna varius consectetur ac eu turpis. Aenean vehicula orci velit, non maximus est aliquam eu. Pellentesque quis maximus nisi. Duis vel tincidunt urna. Sed velit nibh, luctus sed
-                dolor ac, lobortis ornare nulla. Suspendisse non condimentum mauris.
-
-                Donec convallis gravida ante vitae fermentum. Etiam id finibus purus. Sed ornare ultrices ex eget varius. Integer hendrerit imperdiet justo, nec molestie orci tincidunt vitae. Praesent eu massa fermentum, commodo arcu id, ornare lorem. Morbi a lacus nec nisl porta mollis vel nec velit. Proin malesuada
-                justo id massa finibus sodales. Curabitur elit tortor, tristique ut augue eu, lobortis rhoncus leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut nec urna eros. In
-                vitae venenatis erat. Aenean a elit vitae tellus mattis consectetur. In hac habitasse platea dictumst. Aenean quis blandit ipsum, vel semper metus.
-
-                Nunc tristique finibus placerat. Curabitur quis enim vel diam mollis sollicitudin. Morbi tincidunt risus sit amet dui feugiat aliquet. Nulla tortor ex, fringilla ut suscipit at, ultricies vel dolor. Sed euismod congue neque, at aliquet enim accumsan ac. Fusce et dapibus mauris, id suscipit ipsum.
-                Phasellus at orci a purus suscipit lacinia vel vitae ipsum. Maecenas at imperdiet elit. Nunc vulputate dolor sed scelerisque blandit.
-
-                Vivamus nec suscipit velit, vestibulum iaculis metus. Sed sollicitudin lacus neque, et auctor erat vulputate at. Duis fermentum ex sit amet magna dapibus, vitae fringilla lorem tempus. Curabitur quis scelerisque justo, sed tincidunt ex. Vivamus eu justo at nulla pulvinar lobortis. Mauris imperdiet porta
-                pulvinar. Nullam blandit justo in metus gravida, eu porttitor eros viverra. Nulla faucibus odio eget nisl suscipit aliquet. Nulla eget ullamcorper libero, aliquam vulputate sem. Aenean eu mattis lorem, in molestie ipsum.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum porttitor sem et sodales. Integer non nibh quis magna varius consectetur ac eu turpis. Aenean vehicula orci velit, non maximus est aliquam eu. Pellentesque quis maximus nisi. Duis vel tincidunt urna. Sed velit nibh, luctus sed
-                dolor ac, lobortis ornare nulla. Suspendisse non condimentum mauris.
-
-                Donec convallis gravida ante vitae fermentum. Etiam id finibus purus. Sed ornare ultrices ex eget varius. Integer hendrerit imperdiet justo, nec molestie orci tincidunt vitae. Praesent eu massa fermentum, commodo arcu id, ornare lorem. Morbi a lacus nec nisl porta mollis vel nec velit. Proin malesuada
-                justo id massa finibus sodales. Curabitur elit tortor, tristique ut augue eu, lobortis rhoncus leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut nec urna eros. In
-                vitae venenatis erat. Aenean a elit vitae tellus mattis consectetur. In hac habitasse platea dictumst. Aenean quis blandit ipsum, vel semper metus.
-
-                Nunc tristique finibus placerat. Curabitur quis enim vel diam mollis sollicitudin. Morbi tincidunt risus sit amet dui feugiat aliquet. Nulla tortor ex, fringilla ut suscipit at, ultricies vel dolor. Sed euismod congue neque, at aliquet enim accumsan ac. Fusce et dapibus mauris, id suscipit ipsum.
-                Phasellus at orci a purus suscipit lacinia vel vitae ipsum. Maecenas at imperdiet elit. Nunc vulputate dolor sed scelerisque blandit.
-
-                Vivamus nec suscipit velit, vestibulum iaculis metus. Sed sollicitudin lacus neque, et auctor erat vulputate at. Duis fermentum ex sit amet magna dapibus, vitae fringilla lorem tempus. Curabitur quis scelerisque justo, sed tincidunt ex. Vivamus eu justo at nulla pulvinar lobortis. Mauris imperdiet porta
-                pulvinar. Nullam blandit justo in metus gravida, eu porttitor eros viverra. Nulla faucibus odio eget nisl suscipit aliquet. Nulla eget ullamcorper libero, aliquam vulputate sem. Aenean eu mattis lorem, in molestie ipsum.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum porttitor sem et sodales. Integer non nibh quis magna varius consectetur ac eu turpis. Aenean vehicula orci velit, non maximus est aliquam eu. Pellentesque quis maximus nisi. Duis vel tincidunt urna. Sed velit nibh, luctus sed
-                dolor ac, lobortis ornare nulla. Suspendisse non condimentum mauris.
-
-                Donec convallis gravida ante vitae fermentum. Etiam id finibus purus. Sed ornare ultrices ex eget varius. Integer hendrerit imperdiet justo, nec molestie orci tincidunt vitae. Praesent eu massa fermentum, commodo arcu id, ornare lorem. Morbi a lacus nec nisl porta mollis vel nec velit. Proin malesuada
-                justo id massa finibus sodales. Curabitur elit tortor, tristique ut augue eu, lobortis rhoncus leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut nec urna eros. In
-                vitae venenatis erat. Aenean a elit vitae tellus mattis consectetur. In hac habitasse platea dictumst. Aenean quis blandit ipsum, vel semper metus.
-
-                Nunc tristique finibus placerat. Curabitur quis enim vel diam mollis sollicitudin. Morbi tincidunt risus sit amet dui feugiat aliquet. Nulla tortor ex, fringilla ut suscipit at, ultricies vel dolor. Sed euismod congue neque, at aliquet enim accumsan ac. Fusce et dapibus mauris, id suscipit ipsum.
-                Phasellus at orci a purus suscipit lacinia vel vitae ipsum. Maecenas at imperdiet elit. Nunc vulputate dolor sed scelerisque blandit.
-
-                Vivamus nec suscipit velit, vestibulum iaculis metus. Sed sollicitudin lacus neque, et auctor erat vulputate at. Duis fermentum ex sit amet magna dapibus, vitae fringilla lorem tempus. Curabitur quis scelerisque justo, sed tincidunt ex. Vivamus eu justo at nulla pulvinar lobortis. Mauris imperdiet porta
-                pulvinar. Nullam blandit justo in metus gravida, eu porttitor eros viverra. Nulla faucibus odio eget nisl suscipit aliquet. Nulla eget ullamcorper libero, aliquam vulputate sem. Aenean eu mattis lorem, in molestie ipsum.
-
-                Nunc tristique finibus placerat. Curabitur quis enim vel diam mollis sollicitudin. Morbi tincidunt risus sit amet dui feugiat aliquet. Nulla tortor ex, fringilla ut suscipit at, ultricies vel dolor. Sed euismod congue neque, at aliquet enim accumsan ac. Fusce et dapibus mauris, id suscipit ipsum.
-                Phasellus at orci a purus suscipit lacinia vel vitae ipsum. Maecenas at imperdiet elit. Nunc vulputate dolor sed scelerisque blandit.
-
-                Vivamus nec suscipit velit, vestibulum iaculis metus. Sed sollicitudin lacus neque, et auctor erat vulputate at. Duis fermentum ex sit amet magna dapibus, vitae fringilla lorem tempus. Curabitur quis scelerisque justo, sed tincidunt ex. Vivamus eu justo at nulla pulvinar lobortis. Mauris imperdiet porta
-                pulvinar. Nullam blandit justo in metus gravida, eu porttitor eros viverra. Nulla faucibus odio eget nisl suscipit aliquet. Nulla eget ullamcorper libero, aliquam vulputate sem. Aenean eu mattis lorem, in molestie ipsum.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum porttitor sem et sodales. Integer non nibh quis magna varius consectetur ac eu turpis. Aenean vehicula orci velit, non maximus est aliquam eu. Pellentesque quis maximus nisi. Duis vel tincidunt urna. Sed velit nibh, luctus sed
-                dolor ac, lobortis ornare nulla. Suspendisse non condimentum mauris.
-
-                Donec convallis gravida ante vitae fermentum. Etiam id finibus purus. Sed ornare ultrices ex eget varius. Integer hendrerit imperdiet justo, nec molestie orci tincidunt vitae. Praesent eu massa fermentum, commodo arcu id, ornare lorem. Morbi a lacus nec nisl porta mollis vel nec velit. Proin malesuada
-                justo id massa finibus sodales. Curabitur elit tortor, tristique ut augue eu, lobortis rhoncus leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut nec urna eros. In
-                vitae venenatis erat. Aenean a elit vitae tellus mattis consectetur. In hac habitasse platea dictumst. Aenean quis blandit ipsum, vel semper metus.
-
-                Nunc tristique finibus placerat. Curabitur quis enim vel diam mollis sollicitudin. Morbi tincidunt risus sit amet dui feugiat aliquet. Nulla tortor ex, fringilla ut suscipit at, ultricies vel dolor. Sed euismod congue neque, at aliquet enim accumsan ac. Fusce et dapibus mauris, id suscipit ipsum.
-                Phasellus at orci a purus suscipit lacinia vel vitae ipsum. Maecenas at imperdiet elit. Nunc vulputate dolor sed scelerisque blandit.
-
-                Vivamus nec suscipit velit, vestibulum iaculis metus. Sed sollicitudin lacus neque, et auctor erat vulputate at. Duis fermentum ex sit amet magna dapibus, vitae fringilla lorem tempus. Curabitur quis scelerisque justo, sed tincidunt ex. Vivamus eu justo at nulla pulvinar lobortis. Mauris imperdiet porta
-                pulvinar. Nullam blandit justo in metus gravida, eu porttitor eros viverra. Nulla faucibus odio eget nisl suscipit aliquet. Nulla eget ullamcorper libero, aliquam vulputate sem. Aenean eu mattis lorem, in molestie ipsum.
-
-                Nunc tristique finibus placerat. Curabitur quis enim vel diam mollis sollicitudin. Morbi tincidunt risus sit amet dui feugiat aliquet. Nulla tortor ex, fringilla ut suscipit at, ultricies vel dolor. Sed euismod congue neque, at aliquet enim accumsan ac. Fusce et dapibus mauris, id suscipit ipsum.
-                Phasellus at orci a purus suscipit lacinia vel vitae ipsum. Maecenas at imperdiet elit. Nunc vulputate dolor sed scelerisque blandit.
-
-                Vivamus nec suscipit velit, vestibulum iaculis metus. Sed sollicitudin lacus neque, et auctor erat vulputate at. Duis fermentum ex sit amet magna dapibus, vitae fringilla lorem tempus. Curabitur quis scelerisque justo, sed tincidunt ex. Vivamus eu justo at nulla pulvinar lobortis. Mauris imperdiet porta
-                pulvinar. Nullam blandit justo in metus gravida, eu porttitor eros viverra. Nulla faucibus odio eget nisl suscipit aliquet. Nulla eget ullamcorper libero, aliquam vulputate sem. Aenean eu mattis lorem, in molestie ipsum.
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum porttitor sem et sodales. Integer non nibh quis magna varius consectetur ac eu turpis. Aenean vehicula orci velit, non maximus est aliquam eu. Pellentesque quis maximus nisi. Duis vel tincidunt urna. Sed velit nibh, luctus sed
-                dolor ac, lobortis ornare nulla. Suspendisse non condimentum mauris.
-
-                Donec convallis gravida ante vitae fermentum. Etiam id finibus purus. Sed ornare ultrices ex eget varius. Integer hendrerit imperdiet justo, nec molestie orci tincidunt vitae. Praesent eu massa fermentum, commodo arcu id, ornare lorem. Morbi a lacus nec nisl porta mollis vel nec velit. Proin malesuada
-                justo id massa finibus sodales. Curabitur elit tortor, tristique ut augue eu, lobortis rhoncus leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut nec urna eros. In
-                vitae venenatis erat. Aenean a elit vitae tellus mattis consectetur. In hac habitasse platea dictumst. Aenean quis blandit ipsum, vel semper metus.
-
-                Nunc tristique finibus placerat. Curabitur quis enim vel diam mollis sollicitudin. Morbi tincidunt risus sit amet dui feugiat aliquet. Nulla tortor ex, fringilla ut suscipit at, ultricies vel dolor. Sed euismod congue neque, at aliquet enim accumsan ac. Fusce et dapibus mauris, id suscipit ipsum.
-                Phasellus at orci a purus suscipit lacinia vel vitae ipsum. Maecenas at imperdiet elit. Nunc vulputate dolor sed scelerisque blandit.
-
-                Vivamus nec suscipit velit, vestibulum iaculis metus. Sed sollicitudin lacus neque, et auctor erat vulputate at. Duis fermentum ex sit amet magna dapibus, vitae fringilla lorem tempus. Curabitur quis scelerisque justo, sed tincidunt ex. Vivamus eu justo at nulla pulvinar lobortis. Mauris imperdiet porta
-                pulvinar. Nullam blandit justo in metus gravida, eu porttitor eros viverra. Nulla faucibus odio eget nisl suscipit aliquet. Nulla eget ullamcorper libero, aliquam vulputate sem. Aenean eu mattis lorem, in molestie ipsum.
+          <p>There’s a lot of reasons that nutrition experts are always telling people to eat more veggies. Here's more about why this food group is so good for you. When it comes to eating vegetables—Mom was right. They're good for you! That probably doesn't come as a surprise. Most of us know that eating vegetables (and fruits) is a healthy habit. But still, most Americans are not eating the recommended 2 to 4 cups (the exact amount varies depending on age and sex). All veggies count towards your daily quota. That includes starchy ones (like potatoes), leafy greens, canned tomatoes and frozen spinach. To help nudge you towards upping your intake, here are 10 reasons why vegetables are so good for your health.</p>
+          
+          <p>Sometimes inflammation is good, but too much chronic inflammation isn't great for our bodies. Veggies are one of the best foods to eat to help you fend off inflammation. They are rich in antioxidants and phytochemicals to help your body.</p>
+          
+          <p>Nearly half of Americans have high blood pressure, according to the CDC. When it comes to your diet and blood pressure, eating too much salt isn't great. But, eating more potassium-rich foods can help reduce the damage of a high-sodium diet. Vegetables, like beets and spinach, deliver potassium (amongst other nutrients) and the fiber from vegetables also helps your heart.</p>
+          
+          <p>Most of us don't hit our recommended fiber intake (that's 38g/day for men and 25g/day for women). Eating high-fiber foods like whole grains, fruits, legumes, nuts and yes, vegetables can help you get enough of this key nutrient. Fiber is great for your heart and gut, but also can keep you full and reduce your risk of developing diabetes. All vegetables have fiber, so choose a variety to get your fill. Artichokes, sweet potatoes and peas all make our list of foods with more fiber than an apple.</p>
+          
+          <p>Eye health may be top of mind if you stare at a computer and phone all day, which can strain your eyes, according to the American Optometric Association. If you want to protect your eyes, eat more vegetables (you'll also want to take some screen breaks and see your eye doctor). Lutein and zeaxanthin are two carotenoids that help reduce the risk of age-related macular degeneration (AMD). You'll find them and other eye-protecting carotenoids in basil, corn, red peppers, spinach and broccoli.</p>
+          
+          <p>You can help take care of your skin by staying hydrated and getting quality sleep, but what you eat can help too. Tomatoes deliver lycopene, which can actually help protect your skin from sunburn (sunscreen is important too). Kale and avocados can help keep your skin more elastic. Many vegetables, like cucumbers and celery, also have a high water content to help you meet your hydration goals for glowing skin.</p>
+          
+          <p>Heart disease is the leading killer of men and women in America and diet plays a big role in helping keep your heart healthy. Vegetables give you potassium and fiber, two nutrients that are good for your heart. Adding lots of veggies to your diet can also help you keep your weight in a healthy range, which takes some pressure off your heart. Leafy greens, avocados and tomatoes make our list of top heart-healthy foods, but all veggies have benefits for your heart.</p>
+          
+          <p>Whether you have diabetes or not, vegetables are low in calories and high in fiber and nutrients, so they can help fill you up and can minimize blood sugar spikes during meals. Adding some arugula to your pasta helps bulk up your plate and keep you satisfied. Try adding peppers to tacos or cauliflower to stir-fries. Some vegetables are higher in starches and carbs—think potatoes, corn, squash, peas—but they can still be included in your diet. (Here are 10 of the best vegetables to eat when you have diabetes.)</p>
+          
+          <p>No diet choice is guaranteed to keep you cancer free, but vegetables are full of cancer-fighting nutrients and antioxidants that may reduce your risk of certain types of cancers. Cruciferous vegetables, like Brussels sprouts and cauliflower, have been studied for their cancer-fighting power. They deliver potassium, folate, vitamin C and phytochemicals, as well as sulforaphane (highest in broccoli) which may protect your cells from carcinogens. Variety is key here, as all veggies have different nutrients and protective effects.</p>
+          
+          <p>If you want to keep your brain sharp, including vegetables in your diet is the way to go. Vegetables, especially leafy greens, are part of the MIND Diet, which was designed by researchers to help reduce your risk of Alzhemier's disease and dementia. The antioxidants and folate they deliver are key nutrients for your brain.</p>
+          
+          <p>It's no secret that what you eat impacts your immune system. Vitamin C is a key nutrient that's found in lots of vegetables (people are always surprised to learn that broccoli and bell peppers have more vitamin C than an orange) that helps keep your immune system strong. Eating a well-balanced diet with a variety of foods is also important for your immune system, so include lots of different veggies as well as fruits, whole grains, healthy fats and protein sources.</p>
         </div>
-    </div><!-- End of #home-tiles -->
-</div><!-- End of #main-content -->
+      </div>
+    </section>
+    <!-- CONTENT END -->
 
-<!-- jQuery (Bootstrap JS plugins depend on it) -->
-<script src="js/jquery-2.1.4.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/script.js"></script>
-</body>
+    <!-- Here I'm using default Bootstrap 5 JS bundle hosted on their server -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
 </html>
